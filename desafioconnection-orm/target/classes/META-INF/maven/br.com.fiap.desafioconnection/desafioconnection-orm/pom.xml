@@ -17,7 +17,7 @@
 			<artifactId>jdbc-driver</artifactId>
 			<version>12</version>
 			<scope>system</scope>
-			<systemPath>C:\Users\igryn\Downloads\Instalações\sqldeveloper-20.4.1.407.0006-x64\sqldeveloper\jdbc\lib\ojdbc8.jar</systemPath>
+			<systemPath>C:\Users\013751631\Downloads\Ambientes_Faculdade\sqldeveloper-21.4.3.063.0100-x64\sqldeveloper\jdbc\lib\ojdbc8.jar</systemPath>
 		</dependency>
 	</dependencies>
 </project>

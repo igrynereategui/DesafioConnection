@@ -1,4 +1,4 @@
-package br.com.fiap.desafioconnection.entity;
+package br.com.fiap.desafioconnection.domain;
 
 import java.util.Collection;
 
@@ -29,24 +29,22 @@ public class Ticket {
 	String dtTicket;
 
 	@OneToOne
-	@JoinColumn(name = "id_client")
-	private Client idTicketClient;
+	@JoinColumn(name = "id_cliente")
+	private Cliente idTicketCliente;
 
 	@OneToMany(mappedBy = "ticket")
-	private Collection<Product> products;
-
+	private Collection<Produto> produtos;
 
 	public Ticket() {
 		super();
 	}
 
-
-	public Ticket(int idTicket, String dtTicket, Client idTicketClient, Collection<Product> products) {
+	public Ticket(int idTicket, String dtTicket, Cliente idTicketCliente, Collection<Produto> produtos) {
 		super();
 		this.idTicket = idTicket;
 		this.dtTicket = dtTicket;
-		this.idTicketClient = idTicketClient;
-		this.products = products;
+		this.idTicketCliente = idTicketCliente;
+		this.produtos = produtos;
 	}
 
 	public int getIdTicket() {
@@ -65,22 +63,20 @@ public class Ticket {
 		this.dtTicket = dtTicket;
 	}
 
-	public Client getIdTicketClient() {
-		return idTicketClient;
+	public Cliente getIdTicketCliente() {
+		return idTicketCliente;
 	}
 
-	public void setIdTicketClient(Client idTicketClient) {
-		this.idTicketClient = idTicketClient;
+	public void setIdTicketCliente(Cliente idTicketCliente) {
+		this.idTicketCliente = idTicketCliente;
 	}
 
-	public Collection<Product> getProducts() {
-		return products;
+	public Collection<Produto> getProdutos() {
+		return produtos;
 	}
 
-	public void setProducts(Collection<Product> products) {
-		this.products = products;
+	public void setProdutos(Collection<Produto> produtos) {
+		this.produtos = produtos;
 	}
-
-
 
 }

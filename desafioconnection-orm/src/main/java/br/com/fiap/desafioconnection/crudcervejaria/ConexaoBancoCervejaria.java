@@ -1,8 +1,8 @@
-package br.com.fiap.desafioconnection.testes;
+package br.com.fiap.desafioconnection.crudcervejaria;
 
 import javax.persistence.Persistence;
 
-public class ConexaoBanco {
+public class ConexaoBancoCervejaria {
 
 	public static void main(String[] args) {
 		Persistence.createEntityManagerFactory("desafioconnection-orm").createEntityManager();
