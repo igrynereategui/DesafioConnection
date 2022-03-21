@@ -1,11 +1,13 @@
-package br.com.fiap.desafioconnection.crudcervejaria;
+package br.com.fiap.desafioconnection.testesDAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
+import br.com.fiap.desafioconnection.dao.ClienteDAO;
 import br.com.fiap.desafioconnection.domain.Cliente;
 
-public class ExcluirInfoCervejaria {
+
+public class DAOClienteCadastrarTeste {
 
 	public static void main(String[] args) {
 
@@ -15,24 +17,25 @@ public class ExcluirInfoCervejaria {
 
 			em = Persistence.createEntityManagerFactory("desafioconnection-orm").createEntityManager();
 
-			em.getTransaction().begin();
+			ClienteDAO dao = new ClienteDAO(em);
 
-			Cliente excluirCliente = em.find(Cliente.class, 1);
+			Cliente nome = new Cliente(); 
+			nome.setNmCliente("Antônio Augusto"); 
+			nome.setNumeroTelefone("11930512542");
+			dao.cadastrar(nome); 
 
-			em.remove(excluirCliente);
-
-			em.getTransaction().commit();
-
+			dao.commit(); 
+			
 		} catch (Exception e) {
-			if (em != null && em.getTransaction().isActive()) {
-				em.getTransaction().rollback();
-			}
 			e.printStackTrace();
+			em.getTransaction().rollback();
 		} finally {
 			if (em != null) {
 				em.close();
 			}
 			System.exit(0);
 		}
+
 	}
+
 }

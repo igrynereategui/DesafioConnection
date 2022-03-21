@@ -1,4 +1,4 @@
-package br.com.fiap.desafioconnection.crudcervejaria;
+package br.com.fiap.desafioconnection.testesDAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -7,7 +7,7 @@ import br.com.fiap.desafioconnection.domain.Cliente;
 import br.com.fiap.desafioconnection.domain.Produto;
 import br.com.fiap.desafioconnection.domain.Ticket;
 
-public class InserirInfoCervejaria {
+public class InserirTodasOperacoesTeste {
 	
 	public static void main(String[] args) {
 		

@@ -1,4 +1,4 @@
-package br.com.fiap.desafioconnection.testes;
+package br.com.fiap.desafioconnection.testesDAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

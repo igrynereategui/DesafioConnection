@@ -1,18 +1,13 @@
-package br.com.fiap.desafioconnection.testes;
-
-import java.util.List;
+package br.com.fiap.desafioconnection.testesDAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import br.com.fiap.desafioconnection.domain.Ticket;
+public class DAOConsumoMedio {
 
-
-public class DAOUltimaVisita {
-
-	public static void main(String[] args) {
+public static void main(String[] args) {
 
 		
 		try {
@@ -22,9 +17,9 @@ public class DAOUltimaVisita {
 			
 			em.getTransaction().begin();  
 			
-			TypedQuery<String> query = em.createQuery("Select max(dtTicket) from Ticket", String.class);
+			TypedQuery<Double> query = em.createQuery("Select avg(vlTotal) from Produto", Double.class);
 			System.out.println("");
-			System.out.println("Data da última visita: " + query.getResultList());
+			System.out.println("Consumo médio do usuário R$ " + query.getResultList() + " reais.");
 			System.out.println("");
 
 
@@ -40,9 +35,4 @@ public class DAOUltimaVisita {
 		}
 	}
 }
-	
-
-
-			
-		
 

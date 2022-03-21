@@ -1,4 +1,4 @@
-package br.com.fiap.desafioconnection.testes;
+package br.com.fiap.desafioconnection.testesDAO;
 
 import java.util.Iterator;
 import java.util.List;
@@ -6,7 +6,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
 
 import br.com.fiap.desafioconnection.dao.ProdutoDAO;
 import br.com.fiap.desafioconnection.domain.Produto;
